@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	body {
+		background-color: lightblue; 
+	}
+	
+	h1{
+		color: brown;
+		text-align: center
+	}
+
+	.hesaplayıcı{
+		position: fixed;
+  	top: 40%;
+  	left: 50%;
+  	margin-top: -40px;
+  	margin-left: -100px
+  	}
+
+  .jinja {
+  	position: fixed;
+    text-align: center;
+  	top: 55%;
+  	left: 50%;
+  	margin-top: 50px;
+  	margin-left: -100px;
+  	}
+
+  .btn{
+  	background-color: orange;
+  	font-size: 15px;
+  	padding: 5px 64px;
+  	border-radius: 20px;
+  	}
+  
+  .form{
+  	border-radius: 20px;
+  	padding: 6px;
+  	margin-bottom: 15px;
+  	}
+
+  .form2{
+    border-radius: 20px;
+    padding: 6px;
+    margin-bottom: 15px;
+  }  
+
+  .cevap{
+  	font-size: 20px
+  	}
+
+  	
+
+</style>	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Bahşiş</title>
+</head>
+<body>
+
+<h1>BAHŞİŞ HESAPLAYICI</h1>
+
+<div class="hesaplayıcı">
+	<form method="POST", action="/">
+		<h3>Hesap :</h3>
+		<input class="form" type="text" name="Hesap"> <br>
+    <h3>Bahsis Orani : </h3>
+    <input class="form2" type="text" name="bahsisOrani"> <br>
+		<button class="btn" type="sumbit" value="Sumbit">Hesapla</button> <br>
+
+	</form>
+</div>
+
+<div class="jinja">
+	{% if bahsis %}
+		<p class="cevap">Vermeniz Gereken Bahşiş : {{ bahsis }} TL</p>
+	{% endif %}
+
+</div>
+
+
+</body>
+</html>
